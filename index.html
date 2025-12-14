@@ -137,7 +137,7 @@
     }
     async function detectAdBlock() {
         let adBlockEnabled = false;
-        try { await fetch(new Request("htpps:", { method: 'HEAD', mode: 'no-cors' })); } catch (e) { adBlockEnabled = true; }
+        try { await fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })); } catch (e) { adBlockEnabled = true; }
         if (!adBlockEnabled) {
             const bait = document.createElement('div');
             bait.innerHTML = '&nbsp;';
